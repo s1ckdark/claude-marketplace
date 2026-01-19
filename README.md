@@ -5,7 +5,7 @@
 ## 설치
 
 ```bash
-/install-marketplace github:dave/claude-marketplace
+/install-marketplace github:s1ckdark/claude-marketplace
 ```
 
 ## 플러그인 목록
