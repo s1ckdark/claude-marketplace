@@ -1,0 +1,20 @@
+# Claude Code local files
+.claude/
+.sisyphus/
+
+# Debug logs
+*-debug.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Node
+node_modules/
+
+# Local development
+*.local.md
