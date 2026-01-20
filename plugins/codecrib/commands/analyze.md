@@ -1,6 +1,6 @@
 ---
-name: rag-analyze
-description: Analyze codebase structure and generate RAG-indexed documentation for each directory
+name: analyze
+description: Scope out the codebase and generate searchable docs (alias: /scope)
 arguments:
   - name: path
     description: Root path to analyze (default: current directory)
@@ -20,9 +20,9 @@ arguments:
     type: string
 ---
 
-# RAG Analyze Command
+# Analyze Command
 
-Analyze project structure and generate searchable documentation for each directory.
+Scope out your codebase and generate searchable docs for each directory.
 
 ## Instructions
 
@@ -32,7 +32,7 @@ Analyze project structure and generate searchable documentation for each directo
 
 ```
 Use Task tool with:
-- subagent_type: "claude-code-rag:codebase-analyzer"
+- subagent_type: "codecrib:codebase-analyzer"
 - prompt: Include the following parameters:
   - Root path: {{path}} or current directory
   - Max depth: {{depth}} or 4
@@ -58,7 +58,7 @@ The codebase-analyzer agent will:
 
 3. **Phase 3 - RAG Indexing**:
    - Parse generated markdown documents
-   - Upsert to Pinecone index `claude-code-rag`
+   - Upsert to Pinecone index `codecrib`
    - Use provided namespace
 
 ### Step 3: Report Results
@@ -73,13 +73,13 @@ After agent completes, display summary:
 
 ```bash
 # Analyze current project
-/rag-analyze
+/analyze   # or /scope
 
 # Analyze specific path with custom depth
-/rag-analyze --path ./packages/core --depth 5
+/scope --path ./packages/core --depth 5
 
 # Analyze with more deep-analysis targets
-/rag-analyze --top 30 --namespace my-monorepo
+/analyze --top 30 --namespace my-monorepo
 ```
 
 ## Example Task Prompt

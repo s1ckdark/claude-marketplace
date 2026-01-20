@@ -1,18 +1,18 @@
 ---
 name: analyze
-description: Analyze codebase structure and generate RAG-indexed documentation. Use when the user wants to analyze, scan, or document their project structure.
+description: Scope out the codebase and generate searchable docs. Use when the user wants to analyze, scope, scan, or document their project structure. Alias: /scope
 ---
 
-# RAG Analyze
+# Analyze / Scope
 
-Analyze project structure and generate searchable documentation for each directory.
+Scope out your codebase and generate searchable docs for each directory.
 
 ## Usage
 
 ```
-/claude-code-rag:analyze
-/claude-code-rag:analyze --path ./packages/core --depth 5
-/claude-code-rag:analyze --top 30 --namespace my-monorepo
+/analyze                 # or /scope
+/scope --path ./packages/core --depth 5
+/analyze --top 30 --namespace my-monorepo
 ```
 
 ## Parameters
@@ -44,7 +44,7 @@ Analyze project structure and generate searchable documentation for each directo
 ### Phase 3 - RAG Indexing
 
 1. Parse generated markdown documents
-2. Upsert to Pinecone index `claude-code-rag`
+2. Upsert to Pinecone index `codecrib`
 3. Use provided namespace
 
 ### Report Results

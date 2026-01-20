@@ -76,8 +76,8 @@ In plugin settings:
 ## Integration
 
 This hook works with:
-- `/rag-save` command for actual saving
-- `documenter` agent for document generation
+- `/save` (or `/stash`) command for actual saving
+- `codecrib:documenter` agent for document generation
 - Pinecone MCP for storage
 
 ## Privacy Note

@@ -1,17 +1,17 @@
 ---
 name: search
-description: Search the RAG knowledge base for relevant past work and solutions. Use when the user wants to find, search, or look up previous work, solutions, or documentation.
+description: Grab docs from your knowledge stash. Use when the user wants to find, search, grab, or look up previous work, solutions, or documentation. Alias: /grab
 ---
 
-# RAG Search
+# Search / Grab
 
-Search the vector database for relevant past work, solutions, and analyses.
+Grab relevant docs from your knowledge stash.
 
 ## Usage
 
 ```
-/claude-code-rag:search "session timeout handling"
-/claude-code-rag:search "authentication" --type bugfix --limit 3
+/search "session timeout handling"   # or /grab
+/grab "authentication" --type bugfix --limit 3
 ```
 
 ## Parameters
@@ -25,7 +25,7 @@ Search the vector database for relevant past work, solutions, and analyses.
 ## Instructions
 
 1. **Execute vector search** using Pinecone MCP search-records:
-   - Index: claude-code-rag
+   - Index: codecrib
    - Namespace: provided or search all
    - Query: user's search text
    - TopK: limit (default 5)

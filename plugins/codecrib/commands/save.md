@@ -1,6 +1,6 @@
 ---
-name: rag-save
-description: Save current work as a structured document to the RAG knowledge base
+name: save
+description: Save current work to your knowledge stash (alias: /stash)
 arguments:
   - name: type
     description: "Work type: bugfix, feature, refactor, analysis"
@@ -20,9 +20,9 @@ arguments:
     type: string
 ---
 
-# RAG Save Command
+# Save Command
 
-Save the current work session as a structured document to the vector database.
+Stash your work session as a doc in the knowledge base.
 
 ## Instructions
 
@@ -32,7 +32,7 @@ Save the current work session as a structured document to the vector database.
 
 ```
 Use Task tool with:
-- subagent_type: "claude-code-rag:documenter"
+- subagent_type: "codecrib:documenter"
 - prompt: Include the following context:
   - Work type: {{type}} or auto-detect from conversation
   - Title: {{title}} or auto-generate
@@ -73,7 +73,7 @@ After agent generates document, save to Pinecone:
 
 ```
 Use Pinecone MCP upsert-records tool:
-- index: claude-code-rag
+- index: codecrib
 - namespace: {{namespace}} or project name
 - record:
   {
@@ -100,13 +100,13 @@ Display:
 
 ```bash
 # Auto-detect everything from conversation
-/rag-save
+/save   # or /stash
 
 # Specify type and tags
-/rag-save --type bugfix --tags "auth,session" --title "Session timeout fix"
+/stash --type bugfix --tags "auth,session" --title "Session timeout fix"
 
 # Save to specific namespace
-/rag-save --namespace my-project --type feature
+/save --namespace my-project --type feature
 ```
 
 ## Example Task Prompt

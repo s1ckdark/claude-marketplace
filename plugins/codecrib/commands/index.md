@@ -1,6 +1,6 @@
 ---
-name: rag-index
-description: Bulk index local markdown documents to the RAG knowledge base
+name: index
+description: Rack up local docs into the knowledge base (alias: /rack)
 arguments:
   - name: path
     description: Path to directory containing markdown files (default .rag-docs/)
@@ -16,9 +16,9 @@ arguments:
     type: boolean
 ---
 
-# RAG Index Command
+# Index Command
 
-Bulk index local markdown documents into the vector database.
+Rack up your local docs into the vector database.
 
 ## Instructions
 
@@ -49,7 +49,7 @@ Bulk index local markdown documents into the vector database.
    ```
    Use upsert-records tool with batch of records:
    - Process in batches of 10-20 documents
-   - Index: claude-code-rag
+   - Index: codecrib
    - Namespace: provided or derived from project directory
    ```
 
@@ -82,9 +82,9 @@ Bulk index local markdown documents into the vector database.
 ## Example Usage
 
 ```
-/rag-index
-/rag-index --path ./docs/knowledge
-/rag-index --namespace my-project --force
+/index   # or /rack
+/rack --path ./docs/knowledge
+/index --namespace my-project --force
 ```
 
 ## Frontmatter Template

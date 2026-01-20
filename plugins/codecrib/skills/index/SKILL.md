@@ -1,18 +1,18 @@
 ---
 name: index
-description: Bulk index local markdown documents to the RAG knowledge base. Use when the user wants to index, import, or bulk upload existing documentation.
+description: Rack up local docs into the knowledge stash. Use when the user wants to index, rack, import, or bulk upload existing documentation. Alias: /rack
 ---
 
-# RAG Index
+# Index / Rack
 
-Bulk index local markdown documents into the vector database.
+Rack up your local docs into the vector database.
 
 ## Usage
 
 ```
-/claude-code-rag:index
-/claude-code-rag:index --path ./docs/knowledge
-/claude-code-rag:index --namespace my-project --force
+/index                   # or /rack
+/rack --path ./docs/knowledge
+/index --namespace my-project --force
 ```
 
 ## Parameters
@@ -45,7 +45,7 @@ Bulk index local markdown documents into the vector database.
 
 4. **Batch upsert to Pinecone**:
    - Process in batches of 10-20 documents
-   - Index: claude-code-rag
+   - Index: codecrib
    - Namespace: provided or derived from project
 
 5. **Report progress**:

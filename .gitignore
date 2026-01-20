@@ -1,6 +1,7 @@
 # Claude Code local files
 .claude/
 .sisyphus/
+.rag-docs/
 
 # Debug logs
 *-debug.log

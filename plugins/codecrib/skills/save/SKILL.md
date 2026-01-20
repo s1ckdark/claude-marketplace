@@ -1,17 +1,17 @@
 ---
 name: save
-description: Save current work as a structured document to the RAG knowledge base. Use when the user wants to save, store, or document their work session for future reference.
+description: Stash your work to the knowledge crib. Use when the user wants to save, stash, store, or document their work session. Alias: /stash
 ---
 
-# RAG Save
+# Save / Stash
 
-Save the current work session as a structured document to the vector database.
+Stash your work session as a doc in the knowledge base.
 
 ## Usage
 
 ```
-/claude-code-rag:save
-/claude-code-rag:save --type bugfix --tags "auth,session"
+/save                    # or /stash
+/stash --type bugfix --tags "auth,session"
 ```
 
 ## Parameters
@@ -38,7 +38,7 @@ Save the current work session as a structured document to the vector database.
 
 4. **Save to Pinecone** using upsert-records:
    ```
-   Index: claude-code-rag
+   Index: codecrib
    Namespace: project name or provided
    Record fields:
    - id: namespace-timestamp-hash
