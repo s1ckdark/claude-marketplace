@@ -1,8 +1,8 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "dave-cc-plugins",
+  "name": "oh-my-claude-rag",
   "metadata": {
-    "description": "Dave's Claude Code Plugin Marketplace - AI 개발 도구와 생산성 플러그인",
+    "description": "Claude Code RAG Plugin - 벡터 DB 기반 지식 관리",
     "version": "1.0.0"
   },
   "owner": {
@@ -15,7 +15,7 @@
       "name": "claude-code-rag",
       "source": "./plugins/claude-code-rag",
       "description": "RAG 기반 지식 관리 시스템 - 작업 내역, 솔루션, 분석 결과를 벡터 DB에 저장하고 검색",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": {
         "name": "dave",
         "url": "https://github.com/s1ckdark"
