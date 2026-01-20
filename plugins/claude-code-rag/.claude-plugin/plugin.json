@@ -15,10 +15,7 @@
     "codebase-analysis"
   ],
   "commands": "./commands",
-  "agents": [
-    "agents/documenter.md",
-    "agents/codebase-analyzer.md"
-  ],
+  "agents": "./agents",
   "hooks": "./hooks/hooks.json",
   "mcpServers": "./.mcp.json"
 }
