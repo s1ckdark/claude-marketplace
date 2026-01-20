@@ -4,8 +4,11 @@
   "description": "RAG-based knowledge management for Claude Code - Store and retrieve work history, solutions, and analysis",
   "author": {
     "name": "dave",
+    "email": "s1ckdark@github.com",
     "url": "https://github.com/s1ckdark"
   },
+  "repository": "https://github.com/s1ckdark/oh-my-claude-rag",
+  "license": "MIT",
   "keywords": [
     "rag",
     "vector-db",
@@ -13,19 +16,6 @@
     "pinecone",
     "productivity",
     "codebase-analysis"
-  ],
-  "commands": "./commands",
-  "agents": [
-    {
-      "name": "documenter",
-      "description": "Stores and summarizes important decisions and work history",
-      "file": "agents/documenter.md"
-    },
-    {
-      "name": "codebase-analyzer",
-      "description": "Analyzes codebase structure and retrieves relevant context",
-      "file": "agents/codebase-analyzer.md"
-    }
   ],
   "hooks": "./hooks/hooks.json",
   "mcpServers": "./.mcp.json"
