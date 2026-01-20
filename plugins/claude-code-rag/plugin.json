@@ -16,8 +16,16 @@
   ],
   "commands": "./commands",
   "agents": [
-    "agents/documenter.md",
-    "agents/codebase-analyzer.md"
+    {
+      "name": "documenter",
+      "description": "Stores and summarizes important decisions and work history",
+      "file": "agents/documenter.md"
+    },
+    {
+      "name": "codebase-analyzer",
+      "description": "Analyzes codebase structure and retrieves relevant context",
+      "file": "agents/codebase-analyzer.md"
+    }
   ],
   "hooks": "./hooks/hooks.json",
   "mcpServers": "./.mcp.json"
