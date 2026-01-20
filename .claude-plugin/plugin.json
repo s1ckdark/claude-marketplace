@@ -17,8 +17,8 @@
     "productivity",
     "codebase-analysis"
   ],
-  "commands": "../claude-code-rag/commands",
-  "agents": "../claude-code/rag/agents",
-  "hooks": "../claude-code-rag/hooks/hooks.json",
-  "mcpServers": "../claude-code-rag/.mcp.json"
+  "commands": "./plugins/oh-my-claude-rag/commands",
+  "agents": "./plugins/oh-my-claude-rag/agents",
+  "hooks": "./plugins/oh-my-claude-rag/hooks/hooks.json",
+  "mcpServers": "./plugins/oh-my-claude-rag/.mcp.json"
 }
