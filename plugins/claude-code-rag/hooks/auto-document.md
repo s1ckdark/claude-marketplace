@@ -1,13 +1,7 @@
 ---
 name: auto-document
 description: Automatically prompts to save work documentation at session end
-hooks:
-  - event: Stop
-    script: |
-      # Check if significant work was done
-      # This hook suggests documentation when stopping after substantial work
-
-      echo "SESSION_END_HOOK"
+event: Stop
 ---
 
 # Auto-Document Hook

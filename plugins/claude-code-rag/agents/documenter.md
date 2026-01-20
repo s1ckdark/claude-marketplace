@@ -1,13 +1,12 @@
 ---
 name: documenter
 description: Analyzes conversation context and generates structured documentation
-model: sonnet
+model: haiku
 tools:
   - Read
   - Grep
   - Glob
-  - mcp__plugin_pinecone_pinecone__upsert-records
-  - mcp__plugin_pinecone_pinecone__search-records
+  - Write
 ---
 
 # Documenter Agent

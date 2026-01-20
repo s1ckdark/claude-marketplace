@@ -1,26 +1,11 @@
 {
   "mcpServers": {
-    "pinecone": {
-      "command": "npx",
-      "args": ["-y", "@anthropic/pinecone-mcp"],
-      "env": {
-        "PINECONE_API_KEY": "${PINECONE_API_KEY}"
-      }
-    },
     "chroma": {
       "command": "uvx",
       "args": ["chroma-mcp"],
       "env": {
         "CHROMA_HOST": "${CHROMA_HOST:-localhost}",
         "CHROMA_PORT": "${CHROMA_PORT:-8000}"
-      },
-      "disabled": true
-    },
-    "mongodb": {
-      "command": "npx",
-      "args": ["-y", "@anthropic/mongodb-mcp"],
-      "env": {
-        "MONGODB_URI": "${MONGODB_URI}"
       },
       "disabled": true
     }

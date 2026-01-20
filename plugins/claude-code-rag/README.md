@@ -21,12 +21,18 @@ cp -r claude-code-rag ~/.claude/plugins/
 
 ### Pinecone 설정 (권장)
 
+Claude Code에 Pinecone MCP가 기본 내장되어 있습니다.
+
 1. [Pinecone](https://pinecone.io)에서 API 키 발급
-2. 환경변수 설정:
-   ```bash
-   export PINECONE_API_KEY="your-api-key"
+2. `~/.claude/settings.json`에 API 키 설정:
+   ```json
+   {
+     "env": {
+       "PINECONE_API_KEY": "your-api-key"
+     }
+   }
    ```
-3. 인덱스 자동 생성됨: `claude-code-rag`
+3. 인덱스 생성: `/pinecone quickstart` 실행 또는 콘솔에서 직접 생성
 
 ### Chroma 설정 (로컬)
 
