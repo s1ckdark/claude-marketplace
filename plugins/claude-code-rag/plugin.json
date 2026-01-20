@@ -2,34 +2,19 @@
   "name": "claude-code-rag",
   "version": "1.0.0",
   "description": "RAG-based knowledge management for Claude Code - Store and retrieve work history, solutions, and analysis",
-  "author": "dave",
-  "commands": [
-    "commands/save.md",
-    "commands/search.md",
-    "commands/index.md"
+  "author": {
+    "name": "dave",
+    "url": "https://github.com/s1ckdark"
+  },
+  "keywords": [
+    "rag",
+    "vector-db",
+    "knowledge-management",
+    "pinecone",
+    "productivity"
   ],
-  "agents": [
-    "agents/documenter.md"
-  ],
-  "hooks": [
-    "hooks/auto-document.md"
-  ],
-  "settings": {
-    "vector_db": {
-      "type": "string",
-      "default": "pinecone",
-      "description": "Vector database to use (pinecone, chroma, mongodb)",
-      "enum": ["pinecone", "chroma", "mongodb"]
-    },
-    "auto_save": {
-      "type": "boolean",
-      "default": false,
-      "description": "Automatically save work on session end"
-    },
-    "default_namespace": {
-      "type": "string",
-      "default": "",
-      "description": "Default namespace/project for storing documents"
-    }
-  }
+  "commands": "./commands",
+  "agents": "./agents",
+  "hooks": "./hooks",
+  "mcpServers": "./.mcp.json"
 }
